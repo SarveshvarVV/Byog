@@ -27,7 +27,6 @@ public class Mover : MonoBehaviour
         if (canMove)
         {
             Movement();
-
         }
     }
 
