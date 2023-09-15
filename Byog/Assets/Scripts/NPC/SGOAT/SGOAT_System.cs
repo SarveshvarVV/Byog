@@ -12,6 +12,8 @@ public class SGOAT_System : MonoBehaviour
     TD_SGOAT_Spawn system;
     public bool sGOAT_InterationComplete = false;
 
+    [SerializeField] CVC_Interactions vc_interaction;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +31,9 @@ public class SGOAT_System : MonoBehaviour
 
     IEnumerator SGOAT_Inital()
     {
+        vc_interaction.followSGOAT = true;
         transform.position = Vector2.MoveTowards(transform.position, sGOATtraverse_Player.position, sGOATtraverse_Speed);
+        vc_interaction.followPlayer = true;
         yield return new WaitForSeconds(2f);
         //dialog
         yield return new WaitForSeconds(2f);
