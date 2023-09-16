@@ -101,6 +101,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextScene: {fileID: 0}
+  campFire: {fileID: 0}
+  campLocation: {fileID: 0}
   sGOATtraverse_Speed: 0.02
   sGOATtraverse_Player: {fileID: 0}
   sGOATtraverse_Aside: {fileID: 0}
@@ -108,6 +110,12 @@ MonoBehaviour:
   sGOAT_InterationComplete: 0
   canPoof: 0
   vc_interaction: {fileID: 0}
+  dialog:
+  - lines: []
+  - lines: []
+  interaction1: 0
+  interaction2: 0
+  interaction3: 0
 --- !u!61 &499698946
 BoxCollider2D:
   m_ObjectHideFlags: 0

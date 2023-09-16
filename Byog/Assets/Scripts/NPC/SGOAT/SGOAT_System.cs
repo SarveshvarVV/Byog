@@ -24,6 +24,9 @@ public class SGOAT_System : MonoBehaviour, Interactables
     bool flipx = false;
 
     [SerializeField] CVC_Interactions vc_interaction;
+    
+    
+    [SerializeField] List<Dialog> dialog;
 
     public bool interaction1 = false, interaction2 = false, interaction3=false;
 
@@ -90,6 +93,6 @@ public class SGOAT_System : MonoBehaviour, Interactables
 
     void Interactables.Interact()
     {
-        //dialog
+        DialogManager.Instance.ShowDialog(dialog[0]);
     }
 }
