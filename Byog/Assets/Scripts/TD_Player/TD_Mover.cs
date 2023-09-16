@@ -6,10 +6,12 @@ using UnityEngine;
 public class TD_Mover : MonoBehaviour
 {
     Rigidbody2D rb2d;
+    private SpriteRenderer spriteRenderer;
     Animator anim;
     Vector2 moveInput;
     [SerializeField] float moveSpeed = 5f;
     public bool canMove = true;
+    bool flipLeft = true;
 
     
     // Start is called before the first frame update
@@ -17,6 +19,7 @@ public class TD_Mover : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -25,17 +28,34 @@ public class TD_Mover : MonoBehaviour
         moveInput.x = Input.GetAxisRaw("Horizontal");
         moveInput.y = Input.GetAxisRaw("Vertical");
 
-        if(moveInput.x < 0.01f)
+        if (moveInput.x != 0f)
         {
-            anim.SetBool("Idle_right", false);
-        }
-        else if (moveInput.x > 0.01f)
-        {
-            anim.SetBool("Idle_right", true);
+            // Player is moving, update the last movement direction
+            if (Mathf.Abs(moveInput.x) > Mathf.Abs(moveInput.y))
+            {
+                // Horizontal movement is greater, so use left or right
+                flipLeft = (moveInput.x < 0f) ? true : false;
+            }
         }
 
-        anim.SetFloat("Horiontal", moveInput.x);
-        anim.SetFloat("Speed", moveInput.sqrMagnitude);
+        if(flipLeft)
+        {
+            spriteRenderer.flipX = false;
+        }
+        else if (!flipLeft)
+        {
+            spriteRenderer.flipX = true;
+        }
+
+        if(moveInput != Vector2.zero) 
+        {
+            anim.SetBool("Walking", true);
+        }
+        else
+        {
+            anim.SetBool("Walking", false);
+        }
+        
         
     }
 
