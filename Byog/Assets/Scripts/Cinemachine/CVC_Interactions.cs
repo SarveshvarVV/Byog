@@ -10,7 +10,7 @@ public class CVC_Interactions : MonoBehaviour
     CinemachineVirtualCamera vc;
     [SerializeField] GameObject player, sGOAT;
 
-    public bool followPlayer = true, followSGOAT = false;
+    public bool followSGOAT = false;
 
     // Start is called before the first frame update
     void Start()
@@ -21,16 +21,14 @@ public class CVC_Interactions : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (followPlayer)
+        if (followSGOAT)
         {
-            followSGOAT= false;
+            FollowSGOAT();
+        }
+        else
+        {
             FollowPlayer();
         }
-        else if (followSGOAT)
-        {
-            followPlayer = false;
-            FollowSGOAT();
-        }       
     }
 
     private void FollowPlayer()

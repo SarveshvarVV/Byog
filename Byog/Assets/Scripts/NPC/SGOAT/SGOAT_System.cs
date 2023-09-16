@@ -25,16 +25,17 @@ public class SGOAT_System : MonoBehaviour
     {
         if (system.sGOAT_StartInteract)
         {
+            vc_interaction.followSGOAT = true;
             StartCoroutine(SGOAT_Inital());
+            
         }
     }
 
     IEnumerator SGOAT_Inital()
     {
-        vc_interaction.followSGOAT = true;
         transform.position = Vector2.MoveTowards(transform.position, sGOATtraverse_Player.position, sGOATtraverse_Speed);
-        vc_interaction.followPlayer = true;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(4f);
+        vc_interaction.followSGOAT = false;
         //dialog
         yield return new WaitForSeconds(2f);
         transform.position = Vector2.MoveTowards(transform.position, sGOATtraverse_Aside.position, sGOATtraverse_Speed);
