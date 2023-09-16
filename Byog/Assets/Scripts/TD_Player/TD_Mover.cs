@@ -6,21 +6,37 @@ using UnityEngine;
 public class TD_Mover : MonoBehaviour
 {
     Rigidbody2D rb2d;
+    Animator anim;
     Vector2 moveInput;
     [SerializeField] float moveSpeed = 5f;
     public bool canMove = true;
-    SGOAT_System system;
+
     
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        moveInput.x = Input.GetAxisRaw("Horizontal");
+        moveInput.y = Input.GetAxisRaw("Vertical");
 
+        if(moveInput.x < 0.01f)
+        {
+            anim.SetBool("Idle_right", false);
+        }
+        else if (moveInput.x > 0.01f)
+        {
+            anim.SetBool("Idle_right", true);
+        }
+
+        anim.SetFloat("Horiontal", moveInput.x);
+        anim.SetFloat("Speed", moveInput.sqrMagnitude);
+        
     }
 
 
@@ -38,9 +54,7 @@ public class TD_Mover : MonoBehaviour
 
     private void Movement()
     {
-        moveInput.x = Input.GetAxisRaw("Horizontal");
-        moveInput.y = Input.GetAxisRaw("Vertical");
         moveInput.Normalize();
-        rb2d.velocity = moveInput * moveSpeed * Time.deltaTime;
+        rb2d.velocity = moveInput * moveSpeed * Time.fixedDeltaTime;
     }
 }
