@@ -77,6 +77,8 @@ public class SGOAT_System : MonoBehaviour, Interactables
         transform.position = Vector2.MoveTowards(transform.position, sGOATtraverse_Player.position, sGOATtraverse_Speed);
         yield return new WaitForSeconds(4f);
         vc_interaction.followSGOAT = false;
+        TD_SGOAT_Spawn.diaTrig = true;
+        DialogManager.Instance.ShowDialog(dialog[0]);
         //dialog
         yield return new WaitForSeconds(5f);
         flipx = true;
@@ -93,6 +95,6 @@ public class SGOAT_System : MonoBehaviour, Interactables
 
     void Interactables.Interact()
     {
-        DialogManager.Instance.ShowDialog(dialog[0]);
+        StartCoroutine(DialogManager.Instance.ShowDialog(dialog[0]));
     }
 }

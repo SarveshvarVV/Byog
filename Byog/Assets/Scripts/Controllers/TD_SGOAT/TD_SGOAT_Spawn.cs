@@ -13,6 +13,9 @@ public class TD_SGOAT_Spawn : MonoBehaviour
     GameObject player;
     TD_Mover playerMover;
     public bool sGOAT_StartInteract = false;
+    DialogManager dialogManager;
+
+    public static bool diaTrig;
 
     void Start()
     {
@@ -20,11 +23,20 @@ public class TD_SGOAT_Spawn : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         system = sGOAT.GetComponent<SGOAT_System>();
         playerMover = player.GetComponent<TD_Mover>();
+        dialogManager = GetComponent<DialogManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (diaTrig)
+        {
+            dialogManager.HandleUpdate();
+        }
+        else
+        {
+            playerMover.canMove = true;
+        }
         if (system.sGOAT_InterationComplete)
         {
             playerMover.canMove = true;
