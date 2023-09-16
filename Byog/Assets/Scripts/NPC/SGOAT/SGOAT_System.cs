@@ -9,6 +9,9 @@ public class SGOAT_System : MonoBehaviour, Interactables
     Animator anim;
     Rigidbody2D rb;
     SpriteRenderer sr;
+    [SerializeField] GameObject nextScene;
+    [SerializeField] GameObject campFire;
+    [SerializeField] Transform campLocation;
 
     [SerializeField] float sGOATtraverse_Speed = 2f;
     [SerializeField] Transform sGOATtraverse_Player;
@@ -21,6 +24,8 @@ public class SGOAT_System : MonoBehaviour, Interactables
     bool flipx = false;
 
     [SerializeField] CVC_Interactions vc_interaction;
+
+    public bool interaction1 = false, interaction2 = false, interaction3=false;
 
     // Start is called before the first frame update
     void Start()
@@ -60,6 +65,7 @@ public class SGOAT_System : MonoBehaviour, Interactables
         var player = GameObject.FindGameObjectWithTag("Player");
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, 0.12f);
         yield return new WaitForSeconds(0.2f);
+        nextScene.SetActive(true);
         Destroy(gameObject);
     }
 
@@ -76,6 +82,11 @@ public class SGOAT_System : MonoBehaviour, Interactables
         sGOAT_InterationComplete = true;
     }
 
+    void campSpawn()
+    {
+        Instantiate(campFire, campLocation);
+        Destroy(gameObject);
+    }
 
     void Interactables.Interact()
     {

@@ -5,8 +5,7 @@ using UnityEngine;
 public class FireWoodCollector : MonoBehaviour, Interactables
 {
     BoxCollider2D boxCollider;
-    [SerializeField] GameObject campFire;
-    [SerializeField] Transform campLocation;
+
 
     void Start()
     {
@@ -28,8 +27,6 @@ public class FireWoodCollector : MonoBehaviour, Interactables
                 {
                     boxCollider.enabled = false;
                     Interact();
-                    Instantiate(campFire, campLocation);
-                    Destroy(gameObject);
                 }
             }
         }

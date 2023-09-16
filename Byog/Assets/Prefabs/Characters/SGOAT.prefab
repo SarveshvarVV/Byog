@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b38c4dc54297bf04b95d786ead57eebc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextScene: {fileID: 0}
   sGOATtraverse_Speed: 0.02
   sGOATtraverse_Player: {fileID: 0}
   sGOATtraverse_Aside: {fileID: 0}
