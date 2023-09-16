@@ -47,6 +47,6 @@ public class SGOAT_System : MonoBehaviour, Interactables
     }
     void Interactables.Interact()
     {
-        Debug.Log("awedawfd");
+        //dialog
     }
 }
