@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SGOAT_System : MonoBehaviour
+public class SGOAT_System : MonoBehaviour, Interactables
 {
     [SerializeField] float sGOATtraverse_Speed = 2f;
     [SerializeField] Transform sGOATtraverse_Player;
@@ -37,9 +37,16 @@ public class SGOAT_System : MonoBehaviour
         yield return new WaitForSeconds(4f);
         vc_interaction.followSGOAT = false;
         //dialog
-        yield return new WaitForSeconds(2f);
-        transform.position = Vector2.MoveTowards(transform.position, sGOATtraverse_Aside.position, sGOATtraverse_Speed);
+        //once dialog is over call MoveAside();
         system.sGOAT_StartInteract = false;
         sGOAT_InterationComplete = true;
+    }
+    void MoveAside()
+    {
+        transform.position = Vector2.MoveTowards(transform.position, sGOATtraverse_Aside.position, sGOATtraverse_Speed);
+    }
+    void Interactables.Interact()
+    {
+        Debug.Log("awedawfd");
     }
 }

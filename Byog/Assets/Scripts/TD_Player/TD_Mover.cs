@@ -12,6 +12,9 @@ public class TD_Mover : MonoBehaviour
     [SerializeField] float moveSpeed = 5f;
     public bool canMove = true;
     bool flipLeft = true;
+    Vector2 raycastDirection;
+
+    [SerializeField] LayerMask interactableLayer;
 
     
     // Start is called before the first frame update
@@ -27,7 +30,6 @@ public class TD_Mover : MonoBehaviour
     {
         moveInput.x = Input.GetAxisRaw("Horizontal");
         moveInput.y = Input.GetAxisRaw("Vertical");
-
         if (moveInput.x != 0f)
         {
             // Player is moving, update the last movement direction
@@ -41,10 +43,12 @@ public class TD_Mover : MonoBehaviour
         if(flipLeft)
         {
             spriteRenderer.flipX = false;
+            raycastDirection = Vector2.left;
         }
         else if (!flipLeft)
         {
             spriteRenderer.flipX = true;
+            raycastDirection = Vector2.right;
         }
 
         if(moveInput != Vector2.zero) 
@@ -56,9 +60,22 @@ public class TD_Mover : MonoBehaviour
             anim.SetBool("Walking", false);
         }
         
+        if(Input.GetKeyDown(KeyCode.F))
+        {
+            Interact();
+        }
         
     }
 
+    private void Interact()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, raycastDirection, 1.5f, interactableLayer);
+
+        if (hit.collider != null)
+        {
+            hit.collider.GetComponent<Interactables>()?.Interact();
+        }
+    }
 
     private void FixedUpdate()
     {
