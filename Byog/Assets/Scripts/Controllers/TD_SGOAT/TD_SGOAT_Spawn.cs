@@ -7,39 +7,37 @@ using UnityEngine;
 public class TD_SGOAT_Spawn : MonoBehaviour
 {
 
+    
+
     BoxCollider2D sGOATspawncoll;
     [SerializeField] GameObject sGOAT;
     SGOAT_System system;
     GameObject player;
     TD_Mover playerMover;
-    public bool sGOAT_StartInteract = false;
-    DialogManager dialogManager;
-
-    public static bool diaTrig;
 
     void Start()
     {
+
         sGOATspawncoll = GetComponent<BoxCollider2D>();
         player = GameObject.FindGameObjectWithTag("Player");
         system = sGOAT.GetComponent<SGOAT_System>();
         playerMover = player.GetComponent<TD_Mover>();
-        dialogManager = GetComponent<DialogManager>();
+        playerMover.canMove = true;
+        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (diaTrig)
-        {
-            dialogManager.HandleUpdate();
-        }
-        else
-        {
-            playerMover.canMove = true;
-        }
+
         if (system.sGOAT_InterationComplete)
         {
             playerMover.canMove = true;
+        }
+        else
+        {
+            playerMover.canMove = false;
         }
     }
 
@@ -52,7 +50,8 @@ public class TD_SGOAT_Spawn : MonoBehaviour
                 sGOATspawncoll.enabled = false;
                 player.GetComponent<TD_Mover>().canMove = false;
                 sGOAT.SetActive(true);
-                sGOAT_StartInteract = true;
+                system.vc_interaction.followSGOAT = true;
+                StartCoroutine(system.SGOAT_Inital());
             }
         }
     }

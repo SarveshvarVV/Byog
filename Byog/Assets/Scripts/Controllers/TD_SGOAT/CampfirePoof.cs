@@ -18,9 +18,8 @@ public class CampfirePoof : MonoBehaviour
     {
         if (boxCollider != null)
         {
-            if (collision.CompareTag("Player"))
+            if (collision.CompareTag("NPC"))
             {
-                Debug.Log("awdawd");
                 bringin = true;
             }
         }

@@ -110,9 +110,6 @@ MonoBehaviour:
   sGOAT_InterationComplete: 0
   canPoof: 0
   vc_interaction: {fileID: 0}
-  dialog:
-  - lines: []
-  - lines: []
   interaction1: 0
   interaction2: 0
   interaction3: 0
