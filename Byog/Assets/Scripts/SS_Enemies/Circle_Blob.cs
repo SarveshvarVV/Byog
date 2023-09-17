@@ -12,7 +12,6 @@ public class Circle_Blob : MonoBehaviour
     Transform currentPoint;
     [SerializeField] float speed;
 
-    public bool touched = false;
     CircleCollider2D cc2d;
 
     private void Start()
@@ -60,11 +59,11 @@ public class Circle_Blob : MonoBehaviour
             if (collision.CompareTag("Player"))
             {
                 //display text
-                touched = true;
+                SS_GameController.playerIsDead = true;
             }
             else
             {
-                touched=false;
+                SS_GameController.playerIsDead =false;
             }
         }
     }

@@ -21,7 +21,7 @@ public class GoCat : MonoBehaviour, Interactables
         dialog.GetComponentInChildren<Text>().text = "Bob: “Sure, I’ll give it a shot.”";
         yield return new WaitForSeconds(3f);
         dialog.SetActive(false);
-        SceneManager.LoadScene("CatMario");
+        SceneManager.LoadScene("FinalCatMario");
     }
 
 }

@@ -7,7 +7,6 @@ using UnityEngine;
 public class Flying_Blob : MonoBehaviour
 {
     CircleCollider2D circleCollider;
-    public bool touched;
     [SerializeField] float moveSpeed = 2f;
     [SerializeField] Transform target;
 
@@ -25,11 +24,11 @@ public class Flying_Blob : MonoBehaviour
         {
             if (collision.CompareTag("Player"))
             {
-                touched = true;
+                SS_GameController.playerIsDead = true;
             }
             else
             {
-                touched = false;
+                SS_GameController.playerIsDead = false;
             }
         }
     }

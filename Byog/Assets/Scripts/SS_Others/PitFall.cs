@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pitfall : MonoBehaviour
+public class PitFall : MonoBehaviour
 {
     BoxCollider2D boxCollider;
     Rigidbody2D rb2d;
@@ -28,7 +28,8 @@ public class Pitfall : MonoBehaviour
     IEnumerator Pit_Fall()
     {
         boxCollider.enabled = false;
-        rb2d.gravityScale = 2f;
+        rb2d.gravityScale = 5f;
+        gameObject.layer = LayerMask.NameToLayer("Default");
         yield return new WaitForSeconds(3f);
         Destroy(gameObject);
     }

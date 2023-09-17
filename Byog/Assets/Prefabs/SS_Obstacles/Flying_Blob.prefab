@@ -26,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3339478229843275163}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.41, y: 5.26, z: -10.084227}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.22, y: 1.46, z: -10.084227}
+  m_LocalScale: {x: 0.24174745, y: 0.24174745, z: 0.24174745}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 172590285014110919}
@@ -96,7 +96,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3500245871246420642}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 20.27, z: -10.084227}
+  m_LocalPosition: {x: -0.06, y: 5.58, z: -10.084227}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -114,6 +114,7 @@ GameObject:
   - component: {fileID: 172590285014110919}
   - component: {fileID: 1061956400735374951}
   - component: {fileID: 8883736452451602360}
+  - component: {fileID: 7776355558124207514}
   m_Layer: 0
   m_Name: Flying_Blob
   m_TagString: Enemy
@@ -130,8 +131,8 @@ Transform:
   m_GameObject: {fileID: 6228374245514921534}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.276642, y: -6.78, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 717326912641718095}
   - {fileID: 3030390564261976337}
@@ -205,3 +206,19 @@ MonoBehaviour:
   touched: 0
   moveSpeed: 0.02
   target: {fileID: 3030390564261976337}
+--- !u!58 &7776355558124207514
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6228374245514921534}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.25

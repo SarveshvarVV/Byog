@@ -6,7 +6,6 @@ public class BlockFall : MonoBehaviour
 {
     BoxCollider2D boxCollider;
     Rigidbody2D rb2d;
-    public bool touched = false;
     BlockFall_Trigger trigger;
 
     // Start is called before the first frame update
@@ -24,11 +23,11 @@ public class BlockFall : MonoBehaviour
             if (collision.CompareTag("Player"))
             {
                 boxCollider.enabled = false;
-                touched = true;
+                SS_GameController.playerIsDead = true;
             }
             else
             {
-                touched = false;
+                SS_GameController.playerIsDead = false;
             }
         }
     }
@@ -39,7 +38,7 @@ public class BlockFall : MonoBehaviour
         if (trigger.fall)
         {
             gameObject.layer = LayerMask.NameToLayer("Enemy");
-            rb2d.gravityScale = 2f;
+            rb2d.gravityScale = 5f;
         }
     }
 }

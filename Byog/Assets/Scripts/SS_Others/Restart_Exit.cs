@@ -9,11 +9,11 @@ public class Restart_Exit : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SceneManager.LoadScene("Arcade");
+            SceneManager.LoadScene("TD_Arcade");
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene("CatMario");
+            SceneManager.LoadScene("FinalCatMario");
         }
     }
 }

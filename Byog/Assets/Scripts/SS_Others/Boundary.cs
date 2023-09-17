@@ -5,7 +5,6 @@ using UnityEngine;
 public class Boundary : MonoBehaviour
 {
     BoxCollider2D boxCollider;
-    public bool touched =false;
 
     // Start is called before the first frame update
     void Start()
@@ -18,11 +17,11 @@ public class Boundary : MonoBehaviour
         {
             if (collision.CompareTag("Player"))
             {
-                touched = true;
+                SS_GameController.playerIsDead = true;
             }
             else
             {
-                touched=false;
+                SS_GameController.playerIsDead = false;
             }
         }
     }
