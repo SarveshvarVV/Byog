@@ -81,6 +81,7 @@ public class SGOAT_System : MonoBehaviour, Interactables
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, 0.12f);
         yield return new WaitForSeconds(0.2f);
         nextScene.SetActive(true);
+        dialogbox.SetActive(false);
         Destroy(gameObject);
     }
 
@@ -163,33 +164,43 @@ public class SGOAT_System : MonoBehaviour, Interactables
         dialogbox.SetActive(true);
         sGOAT_InterationComplete = false;
         dialogbox.GetComponentInChildren<Text>().text = "Bob: “I’m back, this place is getting cold, let’s make a toast before sending you off yeah?”";
+        dialogbox.SetActive(true);
         yield return new WaitForSeconds(4f);
         dialogbox.SetActive(true);
         dialogbox.GetComponentInChildren<Text>().text = "GOAT: “A toast for me.” ";
         dialogbox.SetActive(true);
         yield return new WaitForSeconds(2f);
+        dialogbox.SetActive(true);
         dialogbox.GetComponentInChildren<Text>().text = "Bob: “Of course.”";
         dialogbox.SetActive(true);
         yield return new WaitForSeconds(2f);
+        dialogbox.SetActive(true);
         dialogbox.GetComponentInChildren<Text>().text = "GOAT: “Can I marry you?”";
         dialogbox.SetActive(true);
         yield return new WaitForSeconds(2f);
+        dialogbox.SetActive(true);
         dialogbox.GetComponentInChildren<Text>().text = "Bob: “What?”";
         dialogbox.SetActive(true);
         yield return new WaitForSeconds(2f);
+        dialogbox.SetActive(true);
         dialogbox.GetComponentInChildren<Text>().text = "GOAT: “What?”";
         dialogbox.SetActive(true);
         yield return new WaitForSeconds(2f);
         dialogbox.GetComponentInChildren<Text>().text = "Bob starts a fire. Time passes by.";
         dialogbox.SetActive(true);
         yield return new WaitForSeconds(1f);
+        dialogbox.SetActive(true);
         Instantiate(campFire, campLocation);
         yield return new WaitForSeconds(2.5f);
+        dialogbox.SetActive(true);
         dialogbox.GetComponentInChildren<Text>().text = "GOAT: “You gotta be kidding me with this toast nonsense. We've been sitting here for 20 minutes. Tell me where the grasslands are and I’m out.”";
         yield return new WaitForSeconds(5f);
+        dialogbox.SetActive(true);
         dialogbox.GetComponentInChildren<Text>().text = "Bob: “Thought I could use some company but sure, keep heading on this path and you’ll find the grasslands.”";
         yield return new WaitForSeconds(3.5f);
+        dialogbox.SetActive(true);
         dialogbox.GetComponentInChildren<Text>().text = "GOAT: “I’m out.”";
+        dialogbox.SetActive(true);
         yield return new WaitForSeconds(1f);
         moveToCamp = true;
         dialogbox.SetActive(false);
@@ -197,13 +208,13 @@ public class SGOAT_System : MonoBehaviour, Interactables
         moveToCamp = false;
         dialogbox.SetActive(true);
         dialogbox.GetComponentInChildren<Text>().text = "Bob: “LMAOOOOO this animal is dumb as hell.”";
+        dialogbox.SetActive(true);
         yield return new WaitForSeconds(2f);
+        dialogbox.SetActive(true);
         dialogbox.GetComponentInChildren<Text>().text = "Bob: Let's eat and get goin \n\t <Eat and Get to the house>";
         yield return new WaitForSeconds(2f);
         sGOAT_InterationComplete = true;
         boxcollider.isTrigger=true;
-        dialogbox.SetActive(false) ;
-        Destroy(dialogbox);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

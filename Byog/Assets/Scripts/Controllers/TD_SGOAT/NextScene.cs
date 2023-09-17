@@ -19,7 +19,7 @@ public class NextScene : MonoBehaviour
             if (collision.CompareTag("Player"))
             {
                 boxCollider.enabled = false;
-                SceneManager.LoadScene("Arcade");
+                SceneManager.LoadScene("TD_Arcade");
             }
         }
     }
