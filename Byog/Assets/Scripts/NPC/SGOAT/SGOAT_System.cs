@@ -32,7 +32,7 @@ public class SGOAT_System : MonoBehaviour, Interactables
     public CVC_Interactions vc_interaction;
 
 
-    public static bool interaction0 = true, interaction1 = false, interaction2 = false, interaction3=false;
+    public static bool interaction0 = true, interaction1 = false;
 
     // Start is called before the first frame update
     void Start()
@@ -202,6 +202,7 @@ public class SGOAT_System : MonoBehaviour, Interactables
         yield return new WaitForSeconds(2f);
         sGOAT_InterationComplete = true;
         boxcollider.isTrigger=true;
+        dialogbox.SetActive(false) ;
         Destroy(dialogbox);
     }
 
