@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: -1543414993, guid: e6a3f630e3470c44ca2627e45e5e2785, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -108,7 +108,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!95 &2074486793
 Animator:
   serializedVersion: 5
@@ -117,7 +117,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7913310509343278125}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 9d5ea5349c76dc247ab98e8cee04eb71, type: 2}
   m_CullingMode: 0
@@ -142,23 +142,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 480d94e6078c1024c9da4895ec28eb0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  kill: 0
   _characterBounds:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0.31, y: 0.44, z: 0}
+    m_Extent: {x: 0.31, y: 0.4, z: 0}
   _groundLayer:
     serializedVersion: 2
     m_Bits: 8
   _detectorCount: 3
   _detectionRayLength: 0.1
   _rayBuffer: 0.1
-  _acceleration: 90
+  _acceleration: 60
   _moveClamp: 13
   _deAcceleration: 60
   _apexBonus: 2
   _fallClamp: -40
   _minFallSpeed: 80
   _maxFallSpeed: 120
-  _jumpHeight: 30
+  _jumpHeight: 20
   _jumpApexThreshold: 10
   _coyoteTimeThreshold: 0.1
   _jumpBuffer: 0.1
@@ -177,7 +178,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.0027185082}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -188,5 +189,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.625, y: 0.875}
+  m_Size: {x: 0.625, y: 0.880437}
   m_EdgeRadius: 0

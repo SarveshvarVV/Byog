@@ -20,9 +20,10 @@ public class ReturnDialog : MonoBehaviour
 
     IEnumerator Play()
     {
-        dialog.SetActive(true);
+        
         GameObject.FindGameObjectWithTag("Player").GetComponent<TD_Mover>().canMove = false;
         yield return new WaitForSeconds(2f);
+        dialog.SetActive(true);
         dialog.GetComponentInChildren<Text>().text = "Bob: “I’m outta here man I ain’t spending another second on this garbage.”";
         yield return new WaitForSeconds(3f);
         dialog.GetComponentInChildren<Text>().text = "Bob: “Wonder if there’s a washroom here.”";

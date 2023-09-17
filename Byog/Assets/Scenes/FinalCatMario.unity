@@ -2267,7 +2267,7 @@ GameObject:
   - component: {fileID: 278906244}
   - component: {fileID: 278906243}
   - component: {fileID: 278906242}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: brick (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2323,7 +2323,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.26393217}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2334,7 +2334,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5}
+  m_Size: {x: 0.5, y: 1.0278645}
   m_EdgeRadius: 0
 --- !u!114 &278906244
 MonoBehaviour:
@@ -2534,21 +2534,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2074486793, guid: 8646c615e545fe546bb27860a99c55aa, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2074486794, guid: 8646c615e545fe546bb27860a99c55aa, type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 7913310509343278125, guid: 8646c615e545fe546bb27860a99c55aa, type: 3}
       propertyPath: m_Name
       value: SS_Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7913310509343278126, guid: 8646c615e545fe546bb27860a99c55aa, type: 3}
-      propertyPath: m_SortingOrder
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7913310509343278127, guid: 8646c615e545fe546bb27860a99c55aa, type: 3}
       propertyPath: m_RootOrder
@@ -3185,7 +3173,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3231,7 +3219,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 690149053}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30.978642, y: 2.0899997, z: 0}
+  m_LocalPosition: {x: 38.71, y: 2.0899997, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -3710,7 +3698,7 @@ GameObject:
   - component: {fileID: 887639260}
   - component: {fileID: 887639259}
   - component: {fileID: 887639258}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: brick (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3766,7 +3754,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.26393217}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3777,7 +3765,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5}
+  m_Size: {x: 0.5, y: 1.0278645}
   m_EdgeRadius: 0
 --- !u!114 &887639260
 MonoBehaviour:
@@ -9120,7 +9108,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 938243914}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30.60932, y: 2.0899997, z: 0}
+  m_LocalPosition: {x: 38.340675, y: 2.0899997, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -10874,7 +10862,7 @@ GameObject:
   - component: {fileID: 1424223630}
   - component: {fileID: 1424223629}
   - component: {fileID: 1424223628}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: brick (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10930,7 +10918,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.26054838}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -10941,7 +10929,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5}
+  m_Size: {x: 0.5, y: 1.021097}
   m_EdgeRadius: 0
 --- !u!114 &1424223630
 MonoBehaviour:
@@ -11020,7 +11008,7 @@ GameObject:
   - component: {fileID: 1466935531}
   - component: {fileID: 1466935530}
   - component: {fileID: 1466935529}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: brick (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11076,7 +11064,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.26731583}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -11087,7 +11075,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5}
+  m_Size: {x: 0.5, y: 1.034632}
   m_EdgeRadius: 0
 --- !u!114 &1466935531
 MonoBehaviour:
@@ -11736,7 +11724,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1792091812}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 29.82, y: 2.09, z: 0}
+  m_LocalPosition: {x: 37.551357, y: 2.09, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -12248,7 +12236,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1876345650}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30.18932, y: 2.0899997, z: 0}
+  m_LocalPosition: {x: 37.920677, y: 2.0899997, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
